@@ -1,0 +1,37 @@
+{
+		"name"					: "Cookie Handler"
+	,	"version"				: "1.0"
+	,	"minimum_chrome_version": "16.0"
+	,	"manifest_version"		: 2
+	,	"description"			: "Disabling all cookies for your protection"
+	
+	,	"icons"					:
+			{ "16"				: "./images/cookie_monster.png"
+			, "48"				: "./images/cookie_monster-48.png"
+			, "128"				: "./images/cookie_monster-128.png"
+			}
+	
+	,	"permissions"			:
+			[
+			  "activeTab"
+			, "storage"
+			, "scripting"
+
+			, "contentSettings"
+			, "contextMenus"
+			, "browsingData"
+			, "tabs"
+			]
+	,   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+	,	"browser_action"		:
+			{ "default_icon"	: "./images/cookie_monster.png"
+			, "default_title" : "Cookie Handler"
+			}
+	
+	,	"incognito"				: "spanning"
+	,	"background"			: 
+			{ "page": "background.html"
+			, "persistent" : true
+			}
+	,	"options_page"			: "./options/options.html"
+	}
